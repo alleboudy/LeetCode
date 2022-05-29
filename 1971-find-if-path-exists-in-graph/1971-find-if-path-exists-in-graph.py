@@ -10,6 +10,10 @@ class Solution(object):
         :type destination: int
         :rtype: bool
         """
+        if source >= n or destination >= n:
+            return False
+        if source == destination or [source, destination] in edges:
+            return True
         graph = defaultdict(list)
         
         for i,j in edges:
